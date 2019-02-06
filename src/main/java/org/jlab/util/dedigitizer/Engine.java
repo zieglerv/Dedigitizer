@@ -197,6 +197,7 @@ public class Engine extends ReconstructionEngine {
 
         OptionParser parser = new OptionParser();
         parser.addRequired("-o");
+        parser.addOption("-st","0.0");
         System.out.println(" PROCESSING ");
         parser.parse(args);
         if(parser.hasOption("-o")==true){
@@ -217,9 +218,8 @@ public class Engine extends ReconstructionEngine {
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(Engine.class.getName()).log(Level.SEVERE, null, ex);
             }
-            //en.pw.printf("%s\t %s\t %s\t %s\t %s\t %s\t %s\t %s\t %s\t\n", "detector", "event", "numIds", "sector", "layer", "component", "time", "energy", "nbph");
-            if(parser.hasOption("-st")==true){
-                double startTime = parser.getOption("-st").doubleValue();
+            if(parser.hasOption("-st")==true){ System.out.println(" PARSING START TIME:");
+                double startTime = parser.getOption("-st").doubleValue(); System.out.println(startTime);
                 if(!Double.isNaN(startTime)) 
                     en.StartTime=startTime;
             }

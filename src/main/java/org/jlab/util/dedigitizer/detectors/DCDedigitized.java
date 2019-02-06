@@ -92,7 +92,7 @@ public class DCDedigitized extends ADegitizer{
                 int superlayerNum = (layer[i] - 1) / 6 + 1;
                 int layerNum = layer[i] - (superlayerNum - 1) * 6;
                 time[i] -= (this.get_T0(sector[i], superlayerNum, layerNum, component[i], _T0) + 
-                        this.TriggerPhase + Engine.StartTime);
+                        this.TriggerPhase + Engine.StartTime); 
             }
         
             for (int i = 0; i < size; i++) {
@@ -111,7 +111,5 @@ public class DCDedigitized extends ADegitizer{
     public double[][][][] getT0Array() {
         return _T0;
     }
-
-    
     
 }
