@@ -184,7 +184,7 @@ public class Engine extends ReconstructionEngine {
         /* 1 */
         // get Field
         
-        Dc.AppendHits(event, pw, eventNb, (float) 0.0);
+        Dc.AppendHits(event, pw, eventNb++, (float) 0.0);
         
        // Ecal.AppendHits(event, pw, eventNb, startTime);
        // Fmt.AppendHits(event, pw, eventNb, startTime);
